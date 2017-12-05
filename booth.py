@@ -17,7 +17,16 @@ t_photo = True
 
 cam = picamera.PiCamera()
 cam.resolution = (800,1200)
-cam.brightness = 70
+cam.framerate = 32
+cam.awb_mode='off'
+cam.awb_gains=Fraction(8,5)
+cam.exposure_mode='backlight'
+cam.shutter_speed=31098
+cam.brightness = 50
+cam.ISO = 400
+cam.meter_mode = 'spot'
+cam.contrast= 0
+cam.drc_strength= 'off'
 
 #text = input("prompt")
 cam.start_preview()
@@ -79,9 +88,9 @@ try:
 		#photo.close()
 
 		#delete photos
-		directory = "/Documents/PhotoBooth/Fab_photoBooth/"
-		os.remove(directory.format(final_photo))
-		os.remove(directory.format(current_image))
+		directory = "/home/pi/Documents/PhotoBooth/Fab_photoBooth/"
+		os.remove((directory + final_photo))
+		os.remove((directory + current_image))
 
 		# Reset
 		t_photo = False

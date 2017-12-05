@@ -4,6 +4,8 @@ from PIL import Image
 import uuid
 from random import randint
 import facebook
+from time import sleep
+
 
 #initialize
 

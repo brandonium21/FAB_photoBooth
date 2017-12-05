@@ -5,7 +5,7 @@ import uuid
 from random import randint
 import facebook
 from time import sleep
-
+import datetime
 
 #initialize
 
@@ -35,7 +35,7 @@ try:
 	    ))
 		pad.paste(img, (0, 0))
 		o = cam.add_overlay(pad.tobytes(), size=img.size)
-		o.alpha = 128
+		o.alpha = 255
 		o.layer = 3
 
 		#count Down

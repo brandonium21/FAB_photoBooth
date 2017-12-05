@@ -30,7 +30,7 @@ cam.meter_mode = 'spot'
 cam.contrast= 0
 cam.drc_strength= 'off'
 cam.annotate_text_size = 160
-cam.annotate_foreground = Color('black')
+#cam.annotate_foreground = Color('black')
 
 
 #text = input("prompt")
@@ -57,13 +57,13 @@ try:
 		#count Down
 		cam.annotate_text = 'Get Ready!'
 		sleep(1)
-		cam.annotate_background = Color('red')
+		#cam.annotate_background = Color('red')
 		cam.annotate_text = 'ONE'
 		sleep(1)
-		cam.annotate_background = Color('yellow')
+		#cam.annotate_background = Color('yellow')
 		cam.annotate_text = 'TWO'
 		sleep(1)
-		cam.annotate_background = Color('green')
+		#cam.annotate_background = Color('green')
 		cam.annotate_text = 'THREE'
 		sleep(1)
 

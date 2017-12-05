@@ -6,12 +6,12 @@ from random import randint
 import facebook
 from time import sleep
 import datetime
-
+import os
 #initialize
 
 #variables
 current_image = ''
-oauth_access_token = "1855940574717375|lb7KxI5Q7wjXcX9_lLLCm1a9AG4"
+oauth_access_token = "EAAaX99auJb8BAGIs6mkG093zOJkTx57ifZBEX0cezTjc9p48LXsZCKPYb4pTxUTpPZAoolWPbZBoix6xv2CFOQUEXF9hCCZBGGUQQFCA9OId8qWJpqKIln6DFZBgvK6uT8YxNPsv5JBrdr1XkvEVgZCiZBLfnqejiZCMpLJIgbZBeh3iG6bmfoH3swKBuBAEfzFuMZD"
 t_photo = True
 #config
 
@@ -35,17 +35,17 @@ try:
 	    ))
 		pad.paste(img, (0, 0))
 		o = cam.add_overlay(pad.tobytes(), size=img.size)
-		o.alpha = 0
+		o.alpha = 128
 		o.layer = 3
 
 		#count Down
 		cam.annotate_text = 'Get Ready!'
 		sleep(1)
-		cam.annotate_text = 'Uno'
+		cam.annotate_text = 'ONE'
 		sleep(1)
-		cam.annotate_text = '2'
+		cam.annotate_text = 'TWO'
 		sleep(1)
-		cam.annotate_text = 'Three'
+		cam.annotate_text = 'THREE'
 		sleep(1)
 
 		#Name and capture photo

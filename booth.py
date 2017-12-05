@@ -1,6 +1,6 @@
 #Dependacies
 import picamera
-import Image
+from PIL import Image
 import uuid
 from random import randint
 import facebook

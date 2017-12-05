@@ -35,7 +35,7 @@ try:
 	    ))
 		pad.paste(img, (0, 0))
 		o = cam.add_overlay(pad.tobytes(), size=img.size)
-		#o.alpha = 128
+		o.alpha = 255
 		o.layer = 3
 
 		#count Down
@@ -54,7 +54,7 @@ try:
 
 		#turn of camera
 		cam.stop_preview()
-
+		sleep(2)
 		#Overlay Photo
 		background = Image.open(current_image)
 		overlay = Image.open(skin)
@@ -62,7 +62,7 @@ try:
 		background = background.convert("RGBA")
 		overlay = overlay.convert("RGBA")
 
-		new_img = Image.blend(background, overlay, 0.5)
+		new_img = Image.blend(background, overlay, 1.0)
 		#Save Photo
 		final_photo = "booth-{}.png".format(str(uuid.uuid4()))
 		new_img.save(final_photo ,"PNG")

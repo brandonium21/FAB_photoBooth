@@ -21,6 +21,19 @@ if t_photo:
 	#Take Photo
 	cam.start_preview()
 
+	# show overlay on preview
+	# Load the arbitrarily sized image
+	skin = "skin-{}.jpg".format(randint(0, 2))
+	img = Image.open(skin)
+	pad = Image.new('RGB', (
+    	((img.size[0] + 31) // 32) * 32,
+    	((img.size[1] + 15) // 16) * 16,
+    ))
+	pad.paste(img, (0, 0))
+	o = cam.add_overlay(pad.tobytes(), size=img.size)
+	o.alpha = 128
+	o.layer = 3
+
 	#count Down
 	cam.annotate_text = 'Get Ready!'
 	sleep(1)
@@ -40,7 +53,7 @@ if t_photo:
 
 	#Overlay Photo
 	background = Image.open(current_image)
-	overlay = Image.open("skin-{}.jpg".format(randint(0, 2)))
+	overlay = Image.open(skin)
 
 	background = background.convert("RGBA")
 	overlay = overlay.convert("RGBA")

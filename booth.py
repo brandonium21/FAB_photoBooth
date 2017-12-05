@@ -17,9 +17,11 @@ t_photo = True
 
 cam = picamera.PiCamera()
 cam.resolution = (800,1200)
-cam.brightness = 60
+cam.brightness = 70
 
 #text = input("prompt")
+cam.start_preview()
+sleep(5)
 try:
 	if t_photo:
 		#Take Photo
@@ -77,8 +79,9 @@ try:
 		#photo.close()
 
 		#delete photos
-		os.remove(final_photo)
-		os.remove(current_image)
+		directory = "/Documents/PhotoBooth/Fab_photoBooth/"
+		os.remove(directory.format(final_photo))
+		os.remove(directory.format(current_image))
 
 		# Reset
 		t_photo = False

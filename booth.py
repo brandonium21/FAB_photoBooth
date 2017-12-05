@@ -70,8 +70,10 @@ try:
 
 		#Upload Photo
 		graph = facebook.GraphAPI(oauth_access_token)
-		photo = open(final_photo, "rb")
-		graph.put_object("me", "photos", message="From Brandon's Photo booth", source=photo.read())
+		#photo = open(final_photo, "rb")
+		# Upload an image with a caption.
+		graph.put_photo(image=open(final_photo, 'rb'), message="From Brandon's Photo booth")
+		#graph.put_object("me", "photos", message="From Brandon's Photo booth", source=photo.read())
 		photo.close()
 
 		#delete photos

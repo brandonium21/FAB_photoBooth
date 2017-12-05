@@ -72,11 +72,14 @@ try:
 
 		background = background.convert("RGBA")
 		overlay = overlay.convert("RGBA")
-
-		new_img = Image.blend(background, overlay, 1.0)
+		background.paste(overlay, (0, 0), overlay)
+		#background.show()
+		#new_img = Image.blend(background, overlay, 0.5)
 		#Save Photo
 		final_photo = "booth-{}.png".format(str(uuid.uuid4()))
-		new_img.save(final_photo ,"PNG")
+		#new_img.save(final_photo ,"PNG")
+		background.save(final_photo ,"PNG")
+
 
 
 		#Upload Photo
@@ -88,7 +91,7 @@ try:
 		#photo.close()
 
 		#delete photos
-		directory = "/home/pi/Documents/PhotoBooth/Fab_photoBooth/"
+		directory = "/home/pi/Documents/PhotoBooth/FAB_photoBooth/"
 		os.remove((directory + final_photo))
 		os.remove((directory + current_image))
 

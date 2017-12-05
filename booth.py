@@ -11,7 +11,7 @@ import os
 
 #variables
 current_image = ''
-oauth_access_token = "EAAaX99auJb8BAGIs6mkG093zOJkTx57ifZBEX0cezTjc9p48LXsZCKPYb4pTxUTpPZAoolWPbZBoix6xv2CFOQUEXF9hCCZBGGUQQFCA9OId8qWJpqKIln6DFZBgvK6uT8YxNPsv5JBrdr1XkvEVgZCiZBLfnqejiZCMpLJIgbZBeh3iG6bmfoH3swKBuBAEfzFuMZD"
+oauth_access_token = "EAAaX99auJb8BAExUxtAYpzHmne4qWGZCyyv4oRZAodIkvxf8V9bgASKKV7XU54291gKpjVuSyCa2MlmZAaNVDAo8ffXSmcXPisOTTOfwX1EGmF9Ys3TEsrvLA1xHdTA9DqDGpVodpp5Vfaz58sydt2bZBr3iSnPyZCZCwfwxXCOTh1fdrxtn6ZCa2i5YAhQtHYZD"
 t_photo = True
 #config
 
@@ -35,7 +35,7 @@ try:
 	    ))
 		pad.paste(img, (0, 0))
 		o = cam.add_overlay(pad.tobytes(), size=img.size)
-		o.alpha = 128
+		#o.alpha = 128
 		o.layer = 3
 
 		#count Down
@@ -74,7 +74,7 @@ try:
 		# Upload an image with a caption.
 		graph.put_photo(image=open(final_photo, 'rb'), message="From Brandon's Photo booth")
 		#graph.put_object("me", "photos", message="From Brandon's Photo booth", source=photo.read())
-		photo.close()
+		#photo.close()
 
 		#delete photos
 		os.remove(final_photo)

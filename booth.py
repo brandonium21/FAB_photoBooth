@@ -17,7 +17,7 @@ cam = picamera.PiCamera()
 cam.resolution = (800,1200)
 cam.brightness = 60
 
-text = input("prompt")
+#text = input("prompt")
 try:
 	if t_photo:
 		#Take Photo

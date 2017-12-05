@@ -25,7 +25,7 @@ try:
 
 		# show overlay on preview
 		# Load the arbitrarily sized image
-		skin = "booth-{}.jpg".format(randint(0, 2))
+		skin = "booth-{}.png".format(randint(0, 2))
 		img = Image.open(skin)
 		pad = Image.new('RGB', (
 	    	((img.size[0] + 31) // 32) * 32,

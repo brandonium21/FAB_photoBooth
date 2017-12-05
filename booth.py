@@ -11,7 +11,7 @@ import datetime
 
 #variables
 current_image = ''
-oauth_access_token = 'lb7KxI5Q7wjXcX9_lLLCm1a9AG4'
+oauth_access_token = "1855940574717375|lb7KxI5Q7wjXcX9_lLLCm1a9AG4"
 t_photo = True
 #config
 
@@ -35,7 +35,7 @@ try:
 	    ))
 		pad.paste(img, (0, 0))
 		o = cam.add_overlay(pad.tobytes(), size=img.size)
-		o.alpha = 255
+		o.alpha = 0
 		o.layer = 3
 
 		#count Down

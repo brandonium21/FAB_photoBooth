@@ -29,7 +29,7 @@ try:
 		# Load the arbitrarily sized image
 		skin = "booth-{}.png".format(randint(1, 3))
 		img = Image.open(skin)
-		pad = Image.new('RGB', (
+		pad = Image.new('RGBA', (
 	    	((img.size[0] + 31) // 32) * 32,
 	    	((img.size[1] + 15) // 16) * 16,
 	    ))

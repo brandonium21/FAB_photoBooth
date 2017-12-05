@@ -10,7 +10,7 @@ import os
 from fractions import Fraction
 from colour import Color
 #initialize
-
+#lalala
 #variables
 current_image = ''
 oauth_access_token = "EAAaX99auJb8BAExUxtAYpzHmne4qWGZCyyv4oRZAodIkvxf8V9bgASKKV7XU54291gKpjVuSyCa2MlmZAaNVDAo8ffXSmcXPisOTTOfwX1EGmF9Ys3TEsrvLA1xHdTA9DqDGpVodpp5Vfaz58sydt2bZBr3iSnPyZCZCwfwxXCOTh1fdrxtn6ZCa2i5YAhQtHYZD"
@@ -66,6 +66,7 @@ try:
 		#cam.annotate_background = Color('green')
 		cam.annotate_text = 'THREE'
 		sleep(1)
+		cam.annotate_text = ''
 
 		#Name and capture photo
 		current_image = 'booth_cap_{}.jpg'.format(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))

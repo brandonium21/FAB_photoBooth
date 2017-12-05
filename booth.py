@@ -7,6 +7,7 @@ import facebook
 from time import sleep
 import datetime
 import os
+from fractions import Fraction
 #initialize
 
 #variables
@@ -19,7 +20,7 @@ cam = picamera.PiCamera()
 cam.resolution = (800,1200)
 cam.framerate = 32
 cam.awb_mode='off'
-#cam.awb_gains=Fraction(8,5)
+cam.awb_gains=Fraction(8,5)
 cam.exposure_mode='backlight'
 cam.shutter_speed=31098
 cam.brightness = 50

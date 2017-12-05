@@ -8,6 +8,7 @@ from time import sleep
 import datetime
 import os
 from fractions import Fraction
+from colour import Color
 #initialize
 
 #variables
